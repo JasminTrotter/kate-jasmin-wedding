@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Box from '@mui/material/Box';
+import { Box, Card } from '@mui/material';
 import Collapse from '@mui/material/Collapse';
 import IconButton from '@mui/material/IconButton';
 import Table from '@mui/material/Table';
@@ -80,26 +80,31 @@ function Row({ row, open, setOpen, index }) {
   );
 }
 
-export default function ItineraryGrid({ rows }) {
+export default function ItineraryGrid({ rows, date }) {
   const [open, setOpen] = React.useState(undefined);
 
   return (
-    <TableContainer component={Paper}>
-      <Table aria-label="collapsible table">
-        <TableHead>
-          <TableRow sx={{ backgroundColor: '#9995DB' }}>
-            <TableCell />
-            <TableCell sx={{ fontWeight: 'bold', fontSize: 'medium', color: '#000' }}>Time</TableCell>
-            <TableCell sx={{ fontWeight: 'bold', fontSize: 'medium', color: '#000' }}>Activity</TableCell>
-            <TableCell sx={{ fontWeight: 'bold', fontSize: 'medium', color: '#000' }}>Location</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {rows.map((row) => (
-            <Row key={row.id} row={row} open={open} setOpen={setOpen} index={row.id} />
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
+    <Card sx={{ marginBottom: '50px' }}>
+      <Typography variant="h6" component="div" sx={{ backgroundColor: 'ivory', lineHeight: '3', fontFamily: 'Cookie', fontSize: '2em' }}>
+        {date}
+      </Typography>
+      <TableContainer component={Paper}>
+        <Table aria-label="collapsible table">
+          <TableHead>
+            <TableRow sx={{ backgroundColor: '#9995DB' }}>
+              <TableCell />
+              <TableCell sx={{ fontWeight: 'bold', fontSize: 'medium', color: '#000' }}>Time</TableCell>
+              <TableCell sx={{ fontWeight: 'bold', fontSize: 'medium', color: '#000' }}>Activity</TableCell>
+              <TableCell sx={{ fontWeight: 'bold', fontSize: 'medium', color: '#000' }}>Location</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {rows.map((row) => (
+              <Row key={row.id} row={row} open={open} setOpen={setOpen} index={row.id} />
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
+    </Card>
   );
 }

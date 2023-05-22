@@ -4,16 +4,14 @@
 }
 
 .App-header {
-  border-radius: 15px;
-  background-color: #9995DB;
+  background-color: ivory;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-family: 'Cookie', cursive;
   font-size: calc(45px + 2vmin);
-  height: 13vh;
-  padding: 5px;
+  padding: 20px;
 }
 
 @media (max-width: 345px) {
@@ -30,9 +28,20 @@
   }
 }
 
-/* Accommodations Panel */
-.MuiTabPanel-root:nth-of-type(3) {
-  background-color: #9995DB !important;
+html {
+  background-image: url('./assets/elopement-flowers.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.MuiAccordion-root {
+  margin: auto !important;
+  max-width: 500px;
+}
+
+.MuiPaper-root {
+  margin: auto;
 }
 
 button.Mui-selected {
@@ -48,7 +57,8 @@ button.Mui-selected {
 
 .MuiTableCell-root.MuiTableCell-head {
   padding: 3px 16px !important;
-  color: white !important;
+  background-color: ivory;
+  color: black !important;
 }
 
 .google-iframe {
@@ -57,18 +67,23 @@ button.Mui-selected {
   vertical-align: middle;
   line-height: initial;
   text-align: left;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px 5px;
 }
-
-.MuiPaper-root {
-  padding: 0px !important;
-}
-
-
-/* @media (min-width: 345px) {
-  .elopement-photo {}
-} */
 
 .elopement-photo {
   max-width: 574px !important;
+}
+
+.MuiAccordionSummary-content {
+  margin: 0px !important;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  opacity: 85%;
+  height: 10vh;
 }
