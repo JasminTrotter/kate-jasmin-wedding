@@ -63,3 +63,12 @@ button.Mui-selected {
 .MuiPaper-root {
   padding: 0px !important;
 }
+
+
+/* @media (min-width: 345px) {
+  .elopement-photo {}
+} */
+
+.elopement-photo {
+  max-width: 574px !important;
+}

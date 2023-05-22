@@ -22,7 +22,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <div style={{ display: 'flex' }}>
-          <img src={weddingRings} className="App-logo" alt="wedding-rings" />
+          <img src={weddingRings} alt="wedding-rings" />
           <p style={{ color: 'black' }}>Kate & Jasmin</p>
         </div>
       </header>
@@ -42,24 +42,25 @@ function App() {
 
         {/* WELCOME */}
         <TabPanel sx={{ padding: '0px' }} value="0">
-          <img src={elopement} alt="elopement-shoot" width="100%" />
-          <div>
-
-            <img src={weddingBells} className="App-logo" alt="wedding-bells" />
+          <img src={elopement} className="elopement-photo" alt="elopement-shoot" width="100%" maxWidth="575px" />
+          <div style={{ marginTop: '30px' }}>
+            <img src={weddingBells} alt="wedding-bells" />
           </div>
-          <p>
-            Welcome to our info site for the <b>Wedding of Kate Bergsgaard and Jasmin Trotter</b>!
-            We are thrilled that you could join us for our special day.
-          </p>
-          <p>
-            On this site, you'll find our recommendations for hotels and restaurants in Portland. Simply click on the tabs above to navigate to the information.
-          </p>
-          <p>
-            The <i>Itinerary</i> tab holds a rough plan of the scheduled group activites, which all guests are invited and encouraged to participate.
-          </p>
-          <p>
-            We can't wait to see you in August!
-          </p>
+          <div style={{ padding: '24px' }}>
+            <p>
+              Welcome to our info site for the <b>Wedding of Kate Bergsgaard and Jasmin Trotter</b>!
+              We are thrilled that you could join us for our special day.
+            </p>
+            <p>
+              On this site, you'll find our recommendations for hotels and restaurants in Portland. Simply click on the tabs above to navigate to the information.
+            </p>
+            <p>
+              The <i>Itinerary</i> tab holds a rough plan of the scheduled group activites, which all guests are invited and encouraged to participate.
+            </p>
+            <p>
+              We can't wait to see you in August!
+            </p>
+          </div>
         </TabPanel>
 
         {/* ACCOMMODATIONS */}
