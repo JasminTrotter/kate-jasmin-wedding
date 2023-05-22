@@ -1,5 +1,6 @@
 import { Card } from '@mui/material';
 import TableContainer from '@mui/material/TableContainer';
+import Typography from '@mui/material/Typography';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -12,7 +13,9 @@ export default function Restaurant({ title, menuHighlights, isAllVeg, googleMaps
 
   return (
     <Card sx={{ marginBottom: '50px', padding: '15px', borderRadius: '15px' }}>
-      <h2>{title}</h2>
+      <Typography variant="h5" gutterBottom component="div">
+        {title}
+      </Typography>
       <Chip
         label="Visit Website"
         component="a"
@@ -20,7 +23,6 @@ export default function Restaurant({ title, menuHighlights, isAllVeg, googleMaps
         variant="outlined"
         clickable
         target='_blank'
-        sx={{ marginBottom: '20px' }}
       />
       {notes && <p style={{ color: '#8F8345' }}><i>NOTE: {notes}</i></p>}
 

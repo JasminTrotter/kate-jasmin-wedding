@@ -2,13 +2,15 @@ import weddingBells from './assets/wedding-bells.svg';
 import weddingRings from './assets/wedding-rings.svg';
 import kiss from './assets/elopement-kiss.jpeg';
 import './App.css';
-import { Box, Tabs, Tab, Card } from '@mui/material';
+import { Box, Tabs, Tab, Card, Chip } from '@mui/material';
 import { TabPanel, TabContext } from '@mui/lab';
 import { useState } from 'react';
 import RestaurantCategory from './RestaurantCategory';
 import ItineraryGrid from './ItineraryGrid';
 import Hotel from './Hotel';
 import { hotels } from './data';
+import PhoneIcon from '@mui/icons-material/Phone';
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import { thursItineraryRows, friItineraryRows, brunchRestaurants, dinnerRestaurants, lateNightRestaurants } from './data';
 
 const activeTabStyles = { borderRadius: '15px', borderBottom: 1, borderColor: 'divider', backgroundColor: '#34324A', color: 'white' };
@@ -96,16 +98,46 @@ function App() {
             </p>
             <h3>Jasmin</h3>
             <p>
-              323-376-3753
-              <br />
-              jasmintmail@gmail.com
+              <div>
+                <Chip
+                  icon={<PhoneIcon />}
+                  label="323-376-3753"
+                  sx={{ marginBottom: '15px' }}
+                  component="a"
+                  href='tel:323-376-3753'
+                />
+              </div>
+              <div>
+                <Chip icon={<MailOutlineIcon />}
+                  component="a"
+                  label="jasmintmail@gmail.com"
+                  href='mailto:jasmintmail@gmail.com'
+                  clickable
+                  target='_blank'
+                />
+              </div>
+
             </p>
             <h3>Kate</h3>
-            <p>
-              503-504-1263
-              <br />
-              katebergie@gmail.com
-            </p>
+            <div>
+              <Chip
+                icon={<PhoneIcon />}
+                label="503-504-1263"
+                sx={{ marginBottom: '15px' }}
+                component="a"
+                href='tel:503-504-1263'
+              />
+            </div>
+            <div>
+              <Chip icon={<MailOutlineIcon />}
+                component="a"
+                label="katebergie@gmail.com"
+                href='mailto:katebergie@gmail.com'
+                clickable
+                target='_blank'
+              />
+            </div>
+
           </Card>
           <Card sx={{ marginBottom: '25px', padding: '15px' }}>
             <h3>Our Home Address</h3>
@@ -118,6 +150,15 @@ function App() {
             <h3>Wedding Venue</h3>
             <h4>Portland City Grill</h4>
             <p>111 SW 5th Ave 30th Floor<br />Portland, OR 97204</p>
+            <Chip
+              label="Visit Website"
+              component="a"
+              href='https://www.portlandcitygrill.com/location/portland-city-grill/'
+              variant="outlined"
+              clickable
+              target='_blank'
+              sx={{ marginBottom: '20px' }}
+            />
             <td className='google-iframe' dangerouslySetInnerHTML={{
               __html: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.3968838702153!2d-122.67852242358755!3d45.5222183295655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54950a06b0fad621%3A0x60ea32db79c16dcc!2sPortland%20City%20Grill!5e0!3m2!1sen!2sus!4v1684726670746!5m2!1sen!2sus" width="250" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
             }} />

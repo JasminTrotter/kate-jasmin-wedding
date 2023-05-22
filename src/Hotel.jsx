@@ -11,9 +11,16 @@ export default function Hotel({ title, googleMaps, phone, website }) {
       </div>
       <CardHeader title={title}></CardHeader>
 
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '15px' }}>
-        <PhoneIcon sx={{ margin: '5px' }} /><div style={{ padding: '10px 0px' }}>{phone}</div>
-      </div>
+      <Chip
+        label={phone}
+        icon={<PhoneIcon />}
+        component="a"
+        href={'tel:' + phone}
+        variant="outlined"
+        clickable
+        target='_blank'
+        sx={{ marginBottom: '15px' }}
+      />
       <div>
 
         <Chip

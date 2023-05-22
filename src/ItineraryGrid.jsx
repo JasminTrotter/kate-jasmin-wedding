@@ -84,7 +84,7 @@ export default function ItineraryGrid({ rows, date }) {
   const [open, setOpen] = React.useState(undefined);
 
   return (
-    <Card sx={{ marginBottom: '50px' }}>
+    <Card sx={{ marginBottom: '50px', maxWidth: '1000px' }}>
       <Typography variant="h6" component="div" sx={{ backgroundColor: 'ivory', lineHeight: '3', fontFamily: 'Cookie', fontSize: '2em' }}>
         {date}
       </Typography>
