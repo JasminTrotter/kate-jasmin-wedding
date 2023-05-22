@@ -12,6 +12,11 @@
   font-family: 'Cookie', cursive;
   font-size: calc(45px + 2vmin);
   padding: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  opacity: 85%;
+  height: 10vh;
 }
 
 @media (max-width: 345px) {
@@ -78,12 +83,4 @@ button.Mui-selected {
 
 .MuiAccordionSummary-content {
   margin: 0px !important;
-}
-
-header {
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  opacity: 85%;
-  height: 10vh;
 }

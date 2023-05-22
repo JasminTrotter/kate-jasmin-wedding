@@ -18,7 +18,7 @@ export default function RestaurantCategory({ header, restaurants }) {
         </AccordionSummary>
       </Box>
       <AccordionDetails>
-        {restaurants.map(r => <Restaurant title={r.title} menuHighlights={r.menuHighlights} isAllVeg={r.isAllVeg} googleMaps={r.googleMaps} notes={r.notes} hasMulipleLocations={r.hasMulipleLocations} />)}
+        {restaurants.map(r => <Restaurant title={r.title} website={r.website} menuHighlights={r.menuHighlights} isAllVeg={r.isAllVeg} googleMaps={r.googleMaps} notes={r.notes} hasMulipleLocations={r.hasMulipleLocations} />)}
       </AccordionDetails>
     </Accordion>
   )
