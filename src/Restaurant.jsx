@@ -10,11 +10,11 @@ import Paper from '@mui/material/Paper';
 export default function Restaurant({ title, menuHighlights, isAllVeg, googleMaps, hasMulipleLocations, notes }) {
 
   return (
-    <Card sx={{ marginBottom: '10px', padding: '15px' }}>
+    <Card sx={{ marginBottom: '10px', padding: '15px', backgroundColor: '#CAC7FF' }}>
       <h2>{title}</h2>
       {notes && <p style={{ color: '#8F8345' }}><i>NOTE: {notes}</i></p>}
 
-      {hasMulipleLocations && <div style={{ color: '#56538F', marginBottom: '10px' }}>This restaurant has multiple locations. Please check google for the other ones</div>}
+      {hasMulipleLocations && <div style={{ color: 'black', marginBottom: '10px' }}>This restaurant has multiple locations. Please check google for the other ones</div>}
 
       <div style={{ textAlign: 'center' }}>
         <td className='google-iframe' dangerouslySetInnerHTML={{ __html: googleMaps }} />

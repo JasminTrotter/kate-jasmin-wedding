@@ -20,7 +20,7 @@ function Row({ row, open, setOpen, index }) {
     <React.Fragment>
       <TableRow
         onClick={() => {
-          if (index === open) setOpen('');
+          if (index === open) setOpen(undefined);
           else setOpen(index);
         }}
         sx={{
@@ -81,7 +81,7 @@ function Row({ row, open, setOpen, index }) {
 }
 
 export default function ItineraryGrid({ rows }) {
-  const [open, setOpen] = React.useState('');
+  const [open, setOpen] = React.useState(undefined);
 
   return (
     <TableContainer component={Paper}>

@@ -1,5 +1,6 @@
 import weddingBells from './assets/wedding-bells.svg';
 import weddingRings from './assets/wedding-rings.svg';
+import elopement from './assets/elopement-shoot.jpeg';
 import './App.css';
 import { Box, Tabs, Tab } from '@mui/material';
 import { TabPanel, TabContext } from '@mui/lab';
@@ -38,9 +39,14 @@ function App() {
           </Tabs>
         </Box>
 
+
         {/* WELCOME */}
-        <TabPanel value="0">
-          <img src={weddingBells} className="App-logo" alt="wedding-bells" />
+        <TabPanel sx={{ padding: '0px' }} value="0">
+          <img src={elopement} alt="elopement-shoot" width="100%" />
+          <div>
+
+            <img src={weddingBells} className="App-logo" alt="wedding-bells" />
+          </div>
           <p>
             Welcome to our info site for the <b>Wedding of Kate Bergsgaard and Jasmin Trotter</b>!
             We are thrilled that you could join us for our special day.
