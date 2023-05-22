@@ -14,33 +14,37 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 
 
-function Row({ row }) {
-  const [open, setOpen] = React.useState(false);
+function Row({ row, open, setOpen, index }) {
 
   return (
     <React.Fragment>
-      <TableRow onClick={() => setOpen(!open)} sx={{
-        '& > *': { borderBottom: 'unset' },
-        backgroundColor: open && '#34324A',
-      }}>
+      <TableRow
+        onClick={() => {
+          if (index === open) setOpen('');
+          else setOpen(index);
+        }}
+        sx={{
+          '& > *': { borderBottom: 'unset' },
+          backgroundColor: (open === index) && '#34324A',
+        }}>
         <TableCell>
           <IconButton
             aria-label="expand row"
             size="small"
-            sx={{ color: open && '#fff' }}
+            sx={{ color: (open === index) && '#fff' }}
           >
-            {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
+            {(open === index) ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
           </IconButton>
         </TableCell>
-        <TableCell component="th" scope="row" sx={{ color: open && '#fff' }}>
+        <TableCell component="th" scope="row" sx={{ color: (open === index) && '#fff' }}>
           {row.time}
         </TableCell>
-        <TableCell sx={{ color: open && '#fff' }}>{row.id}</TableCell>
-        <TableCell sx={{ color: open && '#fff' }}>{row.location}</TableCell>
+        <TableCell sx={{ color: (open === index) && '#fff' }}>{row.id}</TableCell>
+        <TableCell sx={{ color: (open === index) && '#fff' }}>{row.location}</TableCell>
       </TableRow>
       <TableRow>
         <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
-          <Collapse in={open} timeout="auto" unmountOnExit>
+          <Collapse in={(open === index)} timeout="auto" unmountOnExit>
             <Box sx={{ margin: 1 }}>
               <Typography variant="h6" gutterBottom component="div">
                 {row.id}
@@ -77,6 +81,8 @@ function Row({ row }) {
 }
 
 export default function ItineraryGrid({ rows }) {
+  const [open, setOpen] = React.useState('');
+
   return (
     <TableContainer component={Paper}>
       <Table aria-label="collapsible table">
@@ -90,7 +96,7 @@ export default function ItineraryGrid({ rows }) {
         </TableHead>
         <TableBody>
           {rows.map((row) => (
-            <Row key={row.id} row={row} />
+            <Row key={row.id} row={row} open={open} setOpen={setOpen} index={row.id} />
           ))}
         </TableBody>
       </Table>

@@ -23,9 +23,16 @@
 }
 
 @media (max-width: 409px) {
+
+  /* Itinerary Panel */
   .MuiTabPanel-root:nth-of-type(5) {
     padding: 0px !important;
   }
+}
+
+/* Accommodations Panel */
+.MuiTabPanel-root:nth-of-type(3) {
+  background-color: #9995DB !important;
 }
 
 button.Mui-selected {
@@ -41,6 +48,7 @@ button.Mui-selected {
 
 .MuiTableCell-root.MuiTableCell-head {
   padding: 3px 16px !important;
+  color: white !important;
 }
 
 .google-iframe {
@@ -50,4 +58,8 @@ button.Mui-selected {
   line-height: initial;
   text-align: left;
   margin-bottom: 15px;
+}
+
+.MuiPaper-root {
+  padding: 0px !important;
 }
