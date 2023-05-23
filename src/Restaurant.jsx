@@ -7,12 +7,12 @@ import TableCell from '@mui/material/TableCell';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Chip from '@mui/material/Chip';
-import weddingFlowers from './assets/wedding-flowers.svg';
+import weddingToast from './assets/wedding-toast.svg';
 
 export default function Restaurant({ title, menuHighlights, isAllVeg, googleMaps, hasMulipleLocations, notes, website }) {
 
   return (
-    <Card sx={{ marginBottom: '50px', padding: '15px', borderRadius: '15px' }}>
+    <Card elevation='24' sx={{ marginBottom: '20px', padding: '40px 15px 15px 15px', borderRadius: '15px' }}>
       <Typography variant="h5" gutterBottom component="div">
         {title}
       </Typography>
@@ -23,8 +23,9 @@ export default function Restaurant({ title, menuHighlights, isAllVeg, googleMaps
         variant="outlined"
         clickable
         target='_blank'
+        sx={{ margin: '10px' }}
       />
-      {notes && <p style={{ color: '#8F8345' }}><i>NOTE: {notes}</i></p>}
+      <p style={{ color: '#8F8345' }}><i>{notes && `NOTE: ${notes}`}</i></p>
 
       {hasMulipleLocations && <div style={{ color: 'black', marginBottom: '10px' }}>This restaurant has multiple locations. Please check google for the other ones</div>}
 
@@ -57,9 +58,8 @@ export default function Restaurant({ title, menuHighlights, isAllVeg, googleMaps
         }}
         label={isAllVeg ? 'All Vegan or Vegetarian!' : 'Meat, Vegan/Veggie Options'}
       />
-      <div style={{ marginTop: '20px' }}>
-
-        <img src={weddingFlowers} alt="wedding-bells" />
+      <div style={{ margin: '20px' }}>
+        <img src={weddingToast} alt="wedding-toast" />
       </div>
 
     </Card>

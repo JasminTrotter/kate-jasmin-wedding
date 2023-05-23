@@ -5,7 +5,7 @@ import './App.css';
 import { Box, Tabs, Tab, Card, Chip } from '@mui/material';
 import { TabPanel, TabContext } from '@mui/lab';
 import { useState } from 'react';
-import RestaurantCategory from './RestaurantCategory';
+import Restaurant from './Restaurant';
 import ItineraryGrid from './ItineraryGrid';
 import Hotel from './Hotel';
 import { hotels } from './data';
@@ -13,12 +13,14 @@ import PhoneIcon from '@mui/icons-material/Phone';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import { thursItineraryRows, friItineraryRows, brunchRestaurants, dinnerRestaurants, lateNightRestaurants } from './data';
 
-const activeTabStyles = { borderRadius: '15px', borderBottom: 1, borderColor: 'divider', backgroundColor: '#34324A', color: 'white' };
+const activeTabStyles = { borderBottom: 1, borderColor: 'divider', backgroundColor: '#34324A', color: 'white' };
 
 function App() {
-  const [currentTab, updateCurrentTab] = useState('0');
+  const [currentPage, updateCurrentPage] = useState('0');
+  const [currentRestaurantCategory, updateRestaurantCategory] = useState('0');
 
-  function handleTabChange(e, newVal) { updateCurrentTab(newVal) }
+  function handlePageChange(e, newVal) { updateCurrentPage(newVal) }
+  function handleRestaurantCategoryChange(e, newVal) { updateRestaurantCategory(newVal) }
 
   return (
     <div className="App">
@@ -28,22 +30,22 @@ function App() {
           <p style={{ color: 'black', margin: '0px' }}>Kate & Jasmin</p>
         </div>
       </header>
-      <TabContext sx={{ padding: '15px' }} value={currentTab}>
-        <Box sx={{ borderBottom: 1, borderColor: 'divider', backgroundColor: 'ivory' }}>
-          <Tabs onChange={handleTabChange} variant="fullWidth" orientation="vertical" centered value={currentTab} TabIndicatorProps={{
+      <TabContext sx={{ padding: '15px' }} value={currentPage}>
+        <Box sx={{ borderBottom: 1, borderColor: 'divider', backgroundColor: 'ivory', borderBottomLeftRadius: '15px', borderBottomRightRadius: '15px' }}>
+          <Tabs onChange={handlePageChange} variant="fullWidth" orientation="vertical" centered value={currentPage} TabIndicatorProps={{
             style: { display: 'none' }
           }}>
-            <Tab label="Welcome" value="0" sx={currentTab === '0' && activeTabStyles} />
-            <Tab label="Accommodations" value="1" sx={currentTab === '1' && activeTabStyles} />
-            <Tab label="Restaurants" value="2" sx={currentTab === '2' && activeTabStyles} />
-            <Tab label="Itinerary" value="3" sx={currentTab === '3' && activeTabStyles} />
-            <Tab label="Contact" value="4" sx={currentTab === '4' && activeTabStyles} />
+            <Tab label="Welcome" value="0" sx={currentPage === '0' && { borderRadius: '15px', ...activeTabStyles }} />
+            <Tab label="Accommodations" value="1" sx={currentPage === '1' && { borderRadius: '15px', ...activeTabStyles }} />
+            <Tab label="Restaurants" value="2" sx={currentPage === '2' && { borderRadius: '15px', ...activeTabStyles }} />
+            <Tab label="Itinerary" value="3" sx={currentPage === '3' && { borderRadius: '15px', ...activeTabStyles }} />
+            <Tab label="Contact" value="4" sx={currentPage === '4' && { borderRadius: '15px', ...activeTabStyles }} />
           </Tabs>
         </Box>
 
 
         {/* WELCOME */}
-        <TabPanel sx={{ padding: '0px', background: 'white' }} value="0">
+        <TabPanel sx={{ padding: '0px', background: 'white', position: 'relative', bottom: '10px', zIndex: '-1' }} value="0">
           <img src={kiss} className="elopement-photo" alt="elopement-shoot" width="100%" maxwidth="575px" />
 
           <div style={{ marginTop: '25px' }}>
@@ -73,9 +75,33 @@ function App() {
 
         {/* RESTAURANTS */}
         <TabPanel value="2" sx={{ backgroundColor: 'transparent' }}>
-          <RestaurantCategory header="Brunch" restaurants={brunchRestaurants} />
-          <RestaurantCategory header="Dinner" restaurants={dinnerRestaurants} />
-          <RestaurantCategory header="Late-Night" restaurants={lateNightRestaurants} />
+          <TabContext sx={{ padding: '15px' }} value={currentRestaurantCategory}>
+            <Box sx={{ borderBottom: 1, backgroundColor: 'ivory', borderTopLeftRadius: '15px', borderTopRightRadius: '15px' }}>
+              <Tabs onChange={handleRestaurantCategoryChange} variant="fullWidth" centered value={currentRestaurantCategory} TabIndicatorProps={{
+                style: { display: 'none' }
+              }}>
+                <Tab label="Brunch" value="0" sx={currentRestaurantCategory === '0' && { ...activeTabStyles, borderTopLeftRadius: '15px', borderTopRightRadius: '15px' }} />
+                <Tab label="Dinner" value="1" sx={currentRestaurantCategory === '1' && { ...activeTabStyles, borderTopLeftRadius: '15px', borderTopRightRadius: '15px' }} />
+                <Tab label="Late-Night" value="2" sx={currentRestaurantCategory === '2' && { ...activeTabStyles, borderTopLeftRadius: '15px', borderTopRightRadius: '15px' }} />
+              </Tabs>
+            </Box>
+
+
+            {/* BRUNCH */}
+            <TabPanel sx={{ padding: '20px', background: 'white', position: 'relative', bottom: '10px', zIndex: '-1', backgroundColor: '#34324A', }} value="0">
+              {brunchRestaurants.map(r => <Restaurant title={r.title} website={r.website} menuHighlights={r.menuHighlights} isAllVeg={r.isAllVeg} googleMaps={r.googleMaps} notes={r.notes} hasMulipleLocations={r.hasMulipleLocations} />)}
+            </TabPanel>
+
+            {/* DINNER */}
+            <TabPanel sx={{ padding: '20px', background: 'white', position: 'relative', bottom: '10px', zIndex: '-1', backgroundColor: '#34324A', }} value="1">
+              {dinnerRestaurants.map(r => <Restaurant title={r.title} website={r.website} menuHighlights={r.menuHighlights} isAllVeg={r.isAllVeg} googleMaps={r.googleMaps} notes={r.notes} hasMulipleLocations={r.hasMulipleLocations} />)}
+            </TabPanel>
+
+            {/* LATE-NIGHT */}
+            <TabPanel sx={{ padding: '20px', background: 'white', position: 'relative', bottom: '10px', zIndex: '-1', backgroundColor: '#34324A', }} value="2">
+              {lateNightRestaurants.map(r => <Restaurant title={r.title} website={r.website} menuHighlights={r.menuHighlights} isAllVeg={r.isAllVeg} googleMaps={r.googleMaps} notes={r.notes} hasMulipleLocations={r.hasMulipleLocations} />)}
+            </TabPanel>
+          </TabContext>
         </TabPanel>
 
         {/* ITINERARY */}
@@ -131,10 +157,11 @@ function App() {
             <div>
               <Chip icon={<MailOutlineIcon />}
                 component="a"
-                label="katebergie@gmail.com"
-                href='mailto:katebergie@gmail.com'
+                label="katebergie@yahoo.com"
+                href='mailto:katebergie@yahoo.com'
                 clickable
                 target='_blank'
+                sx={{ marginBottom: '20px' }}
               />
             </div>
 
@@ -150,15 +177,17 @@ function App() {
             <h3>Wedding Venue</h3>
             <h4>Portland City Grill</h4>
             <p>111 SW 5th Ave 30th Floor<br />Portland, OR 97204</p>
-            <Chip
-              label="Visit Website"
-              component="a"
-              href='https://www.portlandcitygrill.com/location/portland-city-grill/'
-              variant="outlined"
-              clickable
-              target='_blank'
-              sx={{ marginBottom: '20px' }}
-            />
+            <div>
+              <Chip
+                label="Visit Website"
+                component="a"
+                href='https://www.portlandcitygrill.com/location/portland-city-grill/'
+                variant="outlined"
+                clickable
+                target='_blank'
+                sx={{ marginBottom: '20px' }}
+              />
+            </div>
             <td className='google-iframe' dangerouslySetInnerHTML={{
               __html: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.3968838702153!2d-122.67852242358755!3d45.5222183295655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54950a06b0fad621%3A0x60ea32db79c16dcc!2sPortland%20City%20Grill!5e0!3m2!1sen!2sus!4v1684726670746!5m2!1sen!2sus" width="250" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
             }} />

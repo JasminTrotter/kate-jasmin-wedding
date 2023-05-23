@@ -85,7 +85,7 @@ export default function ItineraryGrid({ rows, date }) {
 
   return (
     <Card sx={{ marginBottom: '50px', maxWidth: '1000px' }}>
-      <Typography variant="h6" component="div" sx={{ backgroundColor: 'ivory', lineHeight: '3', fontFamily: 'Cookie', fontSize: '2em' }}>
+      <Typography variant="h6" component="div" sx={{ backgroundColor: '#34324A', color: 'white', lineHeight: '3', fontFamily: 'Cookie', fontSize: '2em' }}>
         {date}
       </Typography>
       <TableContainer component={Paper}>

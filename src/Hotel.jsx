@@ -1,13 +1,13 @@
 import { Card, CardHeader, Chip } from '@mui/material';
 import PhoneIcon from '@mui/icons-material/Phone';
-import weddingArch from './assets/wedding-arch.svg';
+import heartHouse from './assets/heart-house.svg';
 
 export default function Hotel({ title, googleMaps, phone, website }) {
 
   return (
-    <Card elevation='24' sx={{ maxWidth: "500px", marginBottom: '25px', padding: '25px', backgroundColor: 'white' }}>
+    <Card elevation='24' sx={{ maxWidth: "500px", marginBottom: '25px', padding: '25px', backgroundColor: 'white', borderRadius: '15px' }}>
       <div>
-        <img src={weddingArch} alt="wedding-arch" />
+        <img src={heartHouse} alt="heart-house" />
       </div>
       <CardHeader title={title}></CardHeader>
 

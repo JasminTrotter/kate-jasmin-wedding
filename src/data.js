@@ -70,7 +70,7 @@ export const dinnerRestaurants = [
   {
     title: "Kati",
     website: 'https://katiportland.com/',
-    menuHighlights: "you can't go wrong with thai food here. Get the vegan thai iced tea",
+    menuHighlights: "you can't go wrong with Thai food here. Get the vegan Thai iced tea",
     isAllVeg: true,
     googleMaps: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2796.2688323118914!2d-122.63756102164619!3d45.50466667107459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5495a08418c5ce21%3A0xade7e03a38d8e8dd!2sKati%20Portland!5e0!3m2!1sen!2sus!4v1684620952292!5m2!1sen!2sus" width="250" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
   },
