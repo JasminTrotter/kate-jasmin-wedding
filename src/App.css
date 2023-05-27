@@ -3,25 +3,54 @@
   color: #34324A;
 }
 
+a {
+  text-decoration: none;
+}
+
 .App-header {
+  font-size: 9vw;
   background-color: ivory;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   font-family: 'Cookie', cursive;
-  font-size: calc(45px + 2vmin);
   padding: 20px;
   position: sticky;
+  position: -webkit-sticky;
   top: 0;
-  z-index: 999;
+  z-index: 2;
   opacity: 85%;
   height: 10vh;
 }
 
-@media (max-width: 345px) {
+
+#header-background {
+  background-image: url('./assets/elopement-flowers.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 10vh;
+  width: 100vw;
+  padding: 20px;
+  position: fixed;
+  z-index: 1;
+}
+
+@media (max-width: 745px) {
   .App-header {
-    font-size: calc(35px + 2vmin);
+    font-size: 12vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .App-header {
+    font-size: 14vw;
+  }
+}
+
+@media (min-width: 1030px) {
+  .App-header {
+    font-size: 5vw;
   }
 }
 
@@ -40,13 +69,10 @@ html {
   background-attachment: fixed;
 }
 
-.MuiAccordion-root {
-  margin: auto !important;
-  max-width: 1000px;
-}
-
-.MuiPaper-root {
-  margin: auto;
+.MuiCard-root {
+  margin-bottom: 25px !important;
+  padding: 245x !important;
+  border-radius: 15px !important;
 }
 
 button.Mui-selected {

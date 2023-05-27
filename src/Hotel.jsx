@@ -1,5 +1,6 @@
 import { Card, CardHeader, Chip } from '@mui/material';
 import PhoneIcon from '@mui/icons-material/Phone';
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import heartHouse from './assets/heart-house.svg';
 
 export default function Hotel({ title, googleMaps, phone, website }) {
@@ -11,18 +12,7 @@ export default function Hotel({ title, googleMaps, phone, website }) {
       </div>
       <CardHeader title={title}></CardHeader>
 
-      <Chip
-        label={phone}
-        icon={<PhoneIcon />}
-        component="a"
-        href={'tel:' + phone}
-        variant="outlined"
-        clickable
-        target='_blank'
-        sx={{ marginBottom: '15px' }}
-      />
-      <div>
-
+      <div style={{ display: 'flex', textAlign: 'center', margin: 'auto', overflow: 'scroll' }}>
         <Chip
           label="Visit Website"
           component="a"
@@ -30,7 +20,20 @@ export default function Hotel({ title, googleMaps, phone, website }) {
           variant="outlined"
           clickable
           target='_blank'
+          icon={<OpenInNewIcon />}
+          sx={{ marginLeft: '10px' }}
         />
+        <Chip
+          icon={<PhoneIcon />}
+          label={phone}
+          component="a"
+          href={'tel:' + phone}
+          variant="outlined"
+          clickable
+          target='_blank'
+          sx={{ marginLeft: '15px' }}
+        />
+
       </div>
       <div style={{ textAlign: 'center', marginTop: '25px' }}>
         <td className='google-iframe' dangerouslySetInnerHTML={{ __html: googleMaps }} />

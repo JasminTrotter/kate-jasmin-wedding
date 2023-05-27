@@ -10,36 +10,49 @@ import ItineraryGrid from './ItineraryGrid';
 import Hotel from './Hotel';
 import { hotels } from './data';
 import PhoneIcon from '@mui/icons-material/Phone';
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import { thursItineraryRows, friItineraryRows, brunchRestaurants, dinnerRestaurants, lateNightRestaurants } from './data';
 
 const activeTabStyles = { borderBottom: 1, borderColor: 'divider', backgroundColor: '#34324A', color: 'white' };
+const restaurantPanelStyles = { padding: '20px', position: 'relative' };
 
 function App() {
-  const [currentPage, updateCurrentPage] = useState('0');
-  const [currentRestaurantCategory, updateRestaurantCategory] = useState('0');
+  const [currentTab, updateCurrentTab] = useState('0');
+  const [currentRestaurantTab, updateRestaurantTab] = useState('0');
 
-  function handlePageChange(e, newVal) { updateCurrentPage(newVal) }
-  function handleRestaurantCategoryChange(e, newVal) { updateRestaurantCategory(newVal) }
+  function handlePageChange(e, newVal) { updateCurrentTab(newVal) }
+  function handleRestaurantCategoryChange(e, newVal) {
+    window.scrollTo(0, 240);
+    updateRestaurantTab(newVal);
+  }
+  function goToWelcome(e) {
+    window.scrollTo(0, 0);
+    handlePageChange(undefined, '0')
+  }
 
   return (
     <div className="App">
-      <header className="App-header">
-        <div style={{ display: 'flex' }}>
-          <img src={weddingRings} alt="wedding-rings" />
-          <p style={{ color: 'black', margin: '0px' }}>Kate & Jasmin</p>
-        </div>
-      </header>
-      <TabContext sx={{ padding: '15px' }} value={currentPage}>
+      {/* cover scrolling under header for restaurants because it looks messy with sub-nav */}
+      {currentTab === '2' && <div id="header-background"></div>}
+      <a onClick={goToWelcome} style={{}}>
+        <header className="App-header">
+          <div style={{ display: 'flex' }}>
+            <img src={weddingRings} alt="wedding-rings" />
+            <p style={{ color: 'black', margin: '0px' }}>Kate & Jasmin</p>
+          </div>
+        </header>
+      </a>
+      <TabContext sx={{ padding: '15px' }} value={currentTab}>
         <Box sx={{ borderBottom: 1, borderColor: 'divider', backgroundColor: 'ivory', borderBottomLeftRadius: '15px', borderBottomRightRadius: '15px' }}>
-          <Tabs onChange={handlePageChange} variant="fullWidth" orientation="vertical" centered value={currentPage} TabIndicatorProps={{
+          <Tabs onChange={handlePageChange} variant="fullWidth" orientation="vertical" centered value={currentTab} TabIndicatorProps={{
             style: { display: 'none' }
           }}>
-            <Tab label="Welcome" value="0" sx={currentPage === '0' && { borderRadius: '15px', ...activeTabStyles }} />
-            <Tab label="Accommodations" value="1" sx={currentPage === '1' && { borderRadius: '15px', ...activeTabStyles }} />
-            <Tab label="Restaurants" value="2" sx={currentPage === '2' && { borderRadius: '15px', ...activeTabStyles }} />
-            <Tab label="Itinerary" value="3" sx={currentPage === '3' && { borderRadius: '15px', ...activeTabStyles }} />
-            <Tab label="Contact" value="4" sx={currentPage === '4' && { borderRadius: '15px', ...activeTabStyles }} />
+            <Tab label="Welcome" value="0" sx={currentTab === '0' && { borderRadius: '15px', ...activeTabStyles }} />
+            <Tab label="Accommodations" value="1" sx={currentTab === '1' && { borderRadius: '15px', ...activeTabStyles }} />
+            <Tab label="Restaurants" value="2" sx={currentTab === '2' && { borderRadius: '15px', ...activeTabStyles }} />
+            <Tab label="Itinerary" value="3" sx={currentTab === '3' && { borderRadius: '15px', ...activeTabStyles }} />
+            <Tab label="Contact" value="4" sx={currentTab === '4' && { borderRadius: '15px', ...activeTabStyles }} />
           </Tabs>
         </Box>
 
@@ -53,7 +66,7 @@ function App() {
           </div>
           <div style={{ padding: '0px 24px 24px 24px' }}>
             <p>
-              Welcome to our info site for the <b>Wedding of Kate Bergsgaard and Jasmin Trotter</b>!
+              Welcome to your info site for the <b>Wedding of Kate Bergsgaard and Jasmin Trotter</b>!
               We are thrilled that you could join us for our special day.
             </p>
             <p>
@@ -69,43 +82,47 @@ function App() {
         </TabPanel>
 
         {/* ACCOMMODATIONS */}
-        <TabPanel value="1" sx={{ backgroundColor: 'transparent' }}>
+        <TabPanel value="1" sx={{ maxWidth: '500px', margin: 'auto' }}>
           {hotels.map(h => <Hotel key={h.title} title={h.title} googleMaps={h.googleMaps} phone={h.phone} website={h.website} />)}
         </TabPanel>
 
         {/* RESTAURANTS */}
-        <TabPanel value="2" sx={{ backgroundColor: 'transparent' }}>
-          <TabContext sx={{ padding: '15px' }} value={currentRestaurantCategory}>
-            <Box sx={{ borderBottom: 1, backgroundColor: 'ivory', borderTopLeftRadius: '15px', borderTopRightRadius: '15px' }}>
-              <Tabs onChange={handleRestaurantCategoryChange} variant="fullWidth" centered value={currentRestaurantCategory} TabIndicatorProps={{
+        <TabPanel value="2" sx={{ width: '100%', margin: '0px', padding: '0px' }}>
+          <TabContext sx={{ padding: '15px' }} value={currentRestaurantTab}>
+            <Box sx={{
+              borderBottom: 1, backgroundColor: 'ivory', borderTopLeftRadius: '15px', borderTopRightRadius: '15px', position: 'sticky', zIndex: '4',
+              top: 'calc(10vh + 40px)'
+            }}>
+              <Tabs onChange={handleRestaurantCategoryChange} variant="fullWidth" centered value={currentRestaurantTab} TabIndicatorProps={{
                 style: { display: 'none' }
               }}>
-                <Tab label="Brunch" value="0" sx={currentRestaurantCategory === '0' && { ...activeTabStyles, borderTopLeftRadius: '15px', borderTopRightRadius: '15px' }} />
-                <Tab label="Dinner" value="1" sx={currentRestaurantCategory === '1' && { ...activeTabStyles, borderTopLeftRadius: '15px', borderTopRightRadius: '15px' }} />
-                <Tab label="Late-Night" value="2" sx={currentRestaurantCategory === '2' && { ...activeTabStyles, borderTopLeftRadius: '15px', borderTopRightRadius: '15px' }} />
+                <Tab label="Brunch" value="0" sx={currentRestaurantTab === '0' && { ...activeTabStyles, borderTopLeftRadius: '15px', borderTopRightRadius: '15px' }} />
+                <Tab label="Dinner" value="1" sx={currentRestaurantTab === '1' && { ...activeTabStyles, borderTopLeftRadius: '15px', borderTopRightRadius: '15px' }} />
+                <Tab label="Late-Night" value="2" sx={currentRestaurantTab === '2' && { ...activeTabStyles, borderTopLeftRadius: '15px', borderTopRightRadius: '15px' }} />
               </Tabs>
+              <div style={{ height: '10px', backgroundColor: '#34324A' }}></div>
             </Box>
 
 
             {/* BRUNCH */}
-            <TabPanel sx={{ padding: '20px', background: 'white', position: 'relative', bottom: '10px', zIndex: '-1', backgroundColor: '#34324A', }} value="0">
+            <TabPanel sx={restaurantPanelStyles} value="0">
               {brunchRestaurants.map(r => <Restaurant title={r.title} website={r.website} menuHighlights={r.menuHighlights} isAllVeg={r.isAllVeg} googleMaps={r.googleMaps} notes={r.notes} hasMulipleLocations={r.hasMulipleLocations} />)}
             </TabPanel>
 
             {/* DINNER */}
-            <TabPanel sx={{ padding: '20px', background: 'white', position: 'relative', bottom: '10px', zIndex: '-1', backgroundColor: '#34324A', }} value="1">
+            <TabPanel sx={restaurantPanelStyles} value="1">
               {dinnerRestaurants.map(r => <Restaurant title={r.title} website={r.website} menuHighlights={r.menuHighlights} isAllVeg={r.isAllVeg} googleMaps={r.googleMaps} notes={r.notes} hasMulipleLocations={r.hasMulipleLocations} />)}
             </TabPanel>
 
             {/* LATE-NIGHT */}
-            <TabPanel sx={{ padding: '20px', background: 'white', position: 'relative', bottom: '10px', zIndex: '-1', backgroundColor: '#34324A', }} value="2">
+            <TabPanel sx={restaurantPanelStyles} value="2">
               {lateNightRestaurants.map(r => <Restaurant title={r.title} website={r.website} menuHighlights={r.menuHighlights} isAllVeg={r.isAllVeg} googleMaps={r.googleMaps} notes={r.notes} hasMulipleLocations={r.hasMulipleLocations} />)}
             </TabPanel>
           </TabContext>
         </TabPanel>
 
         {/* ITINERARY */}
-        <TabPanel sx={{ backgroundColor: 'transparent' }} value="3">
+        <TabPanel value="3" sx={{ maxWidth: '1000px', margin: 'auto' }}>
           <div style={{ paddingTop: '20px' }}>
             <ItineraryGrid rows={thursItineraryRows} date="Thursday, August 10" />
             <ItineraryGrid rows={friItineraryRows} date="Friday, August 11" />
@@ -113,7 +130,7 @@ function App() {
         </TabPanel>
 
         {/* CONTACT */}
-        <TabPanel value="4">
+        <TabPanel value="4" sx={{ maxWidth: '500px', margin: 'auto' }}>
           <Card sx={{ marginBottom: '25px', padding: '15px' }}>
             <div style={{ margin: '15px' }}>
               <img src={weddingBells} alt="wedding-bells" />
@@ -180,6 +197,7 @@ function App() {
             <div>
               <Chip
                 label="Visit Website"
+                icon={<OpenInNewIcon />}
                 component="a"
                 href='https://www.portlandcitygrill.com/location/portland-city-grill/'
                 variant="outlined"
@@ -194,6 +212,14 @@ function App() {
             <p><b>Wedding Date: </b>Friday, August 11, 2023, 6pm</p>
           </Card>
         </TabPanel>
+
+        <Chip
+          component='button'
+          onClick={() => window.scrollTo(0, 0)}
+          label='^ Back to Top'
+          sx={{ marginBottom: '25px', backgroundColor: 'white' }}
+        >
+        </Chip>
       </TabContext>
     </div>
   );

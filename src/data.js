@@ -55,7 +55,7 @@ export const dinnerRestaurants = [
     title: "UCHU Sushi",
     website: 'https://www.uchusushi.com/',
     menuHighlights: 'Iggy Popper Roll (you can sub vegan cream cheese!)',
-    notes: "Second Best Sushi in Town and they have cool fish aquarium. And this was Kate and Jasmin's SECOND DATE :D",
+    notes: "Second Best Sushi in Town and they have cool fish aquarium. And this was Kate and Jasmin's SECOND DATE 😄",
     isAllVeg: false,
     googleMaps: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2793.9465531093756!2d-122.68012411244628!3d45.551400696495826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5495a76a504903af%3A0x47e03245ee0e6fc7!2sUCHU%20Sushi!5e0!3m2!1sen!2sus!4v1684619166636!5m2!1sen!2sus" width="250" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
   },
@@ -174,7 +174,7 @@ export const lateNightRestaurants = [
     googleMaps: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44726.02366467302!2d-122.71711165136719!3d45.522629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5495a0beba84c9eb%3A0x838dfbaf689e3cdf!2sMatador%20East%20Portland!5e0!3m2!1sen!2sus!4v1684618245565!5m2!1sen!2sus" width="250" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
   },
   {
-    title: "Romtoms",
+    title: "Rontoms",
     notes: 'Nice outdoor seating with firepits',
     website: 'http://www.rontoms.net/',
     menuHighlights: 'Veggie Burger, Tofutti vegan ice cream sandwich',
@@ -184,6 +184,12 @@ export const lateNightRestaurants = [
 ]
 
 export const hotels = [
+  {
+    title: 'The Nines',
+    website: 'https://www.thenines.com/',
+    phone: '503-222-9996',
+    googleMaps: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.5594334946404!2d-122.68037202358776!3d45.51894672978407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54950a05a9df9055%3A0x309cbd634dc61cc0!2sThe%20Nines%2C%20a%20Luxury%20Collection%20Hotel%2C%20Portland!5e0!3m2!1sen!2sus!4v1684881880469!5m2!1sen!2sus" width="250" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>',
+  },
   {
     title: 'Hyatt Regency Portland At The Oregon Convention Center',
     website: 'https://www.hyatt.com/en-US/hotel/oregon/hyatt-regency-portland-at-the-oregon-convention-center/pdxrp/?src=corp_lclb_gmb_seo_pdxrp',
