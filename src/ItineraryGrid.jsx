@@ -58,7 +58,7 @@ function Row({ row, open, setOpen, index }) {
                 </TableHead>
                 <TableBody>
                   {row.invitees && <TableCell>{row.invitees}</TableCell>}
-                  <TableCell>{row.tooltip}</TableCell>
+                  <TableCell>{row.description}</TableCell>
                 </TableBody>
               </Table>
 
@@ -70,7 +70,7 @@ function Row({ row, open, setOpen, index }) {
                   lineHeight: 'initial',
                   textAlign: 'left',
                   marginBottom: '15px',
-                }} dangerouslySetInnerHTML={{ __html: row.map }} />
+                }} dangerouslySetInnerHTML={{ __html: row.googleMap }} />
               </div>
             </Box>
           </Collapse>

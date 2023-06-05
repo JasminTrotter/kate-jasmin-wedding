@@ -1,52 +1,61 @@
 export const thursItineraryRows = [
   {
-    time: '4:00pm',
+    time: 'Afternoon',
     id: 'Arrivals',
-    location: '',
-    tooltip: 'Check into your hotel, relax, freshen up',
+    location: 'PDX',
+    description: 'Plan to arrive in the afternoon if you would like to be here in time for dinner. Let Kate or Jasmin know if you need a ride from the airport.'
   },
   {
-    time: '6:00pm',
+    time: '7:00pm',
     id: 'Dinner',
-    location: "Take a look at our recommended restaurants!",
-    tooltip: "Click on the 'Restaurants' tab above to view our favorite places to eat in Portland",
-    map: ''
+    invitees: 'Everyone',
+    location: 'Bamboo Sushi - SE Portland',
+    description: 'Welcome Dinner for all wedding guests',
+    googleMap: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.48096702596!2d-122.6396940235877!3d45.52052602967852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5495a0be15439877%3A0xd7661c0993836182!2sBamboo%20Sushi!5e0!3m2!1sen!2sus!4v1685937097557!5m2!1sen!2sus" width="260" height="260" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
   },
 ]
 
 export const friItineraryRows = [
   {
+    time: '2:00pm',
+    invitees: 'Family',
+    id: 'Family Photos',
+    location: 'Laurelhurst Park',
+    description: 'Family Photos in the park taken by photographer.',
+    googleMap: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11181.243923316675!2d-122.62934143887644!3d45.523947206694864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5495a0eac4eeb42d%3A0xa26df736588d055e!2sLaurelhurst%20Park!5e0!3m2!1sen!2sus!4v1685938203527!5m2!1sen!2sus" width="260" height="260" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
+  },
+  {
     time: '6:00pm',
     invitees: 'Everyone',
     id: 'Dinner and Ceremony',
     location: 'Portland City Grill',
-    tooltip: 'A brief vow-exchange ceremnory will take place at Portland City Grill. Dinner and speeches to directly follow.',
-    map: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.396883870209!2d-122.67852242358757!3d45.5222183295655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54950a06b0fad621%3A0x60ea32db79c16dcc!2sPortland%20City%20Grill!5e0!3m2!1sen!2sus!4v1684706656612!5m2!1sen!2sus" width=260" height=260" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
+    description: 'A brief vow-exchange ceremnory will take place at Portland City Grill. Dinner and speeches to directly follow.',
+    googleMap: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.396883870209!2d-122.67852242358757!3d45.5222183295655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54950a06b0fad621%3A0x60ea32db79c16dcc!2sPortland%20City%20Grill!5e0!3m2!1sen!2sus!4v1684706656612!5m2!1sen!2sus" width=260" height=260" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
   },
   {
     time: '10:00pm',
     id: 'Drinks and Dancing',
     location: "Jackie's",
-    tooltip: "Put on your dancing shoes 'cause we'll dance the night away at one of our favorite clubs",
-    map: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.4566808930886!2d-122.65847282358759!3d45.521014829645864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5495a1246fccb831%3A0xe030d600050c6494!2sJackie&#39;s!5e0!3m2!1sen!2sus!4v1684724085513!5m2!1sen!2sus" width="260" height="260" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
+    description: "Put on your dancing shoes 'cause we'll dance the night away at one of our favorite clubs",
+    googleMap: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.4566808930886!2d-122.65847282358759!3d45.521014829645864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5495a1246fccb831%3A0xe030d600050c6494!2sJackie&#39;s!5e0!3m2!1sen!2sus!4v1684724085513!5m2!1sen!2sus" width="260" height="260" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
   },
 ]
 export const satItineraryRows = [
   {
-    time: '11:00am',
-    invitees: 'Everyone',
-    id: 'Brunch',
-    location: 'TBD',
-    tooltip: '',
-    map: ''
-  },
-  {
     time: '1:00pm',
     invitees: 'Everyone',
-    id: 'Hike',
-    location: 'TBD',
-    tooltip: '',
-    map: ''
+    id: 'Visit the Rose Garden',
+    location: 'International Rose Test Garden',
+    description: 'Take a walk with us in the beautiful rose garden, one of the gems of Portland.',
+    googleMap: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.5589664681825!2d-122.70784362358769!3d45.518956129783334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5495098a88c9aa7d%3A0x91fbfe94968fdfc6!2sInternational%20Rose%20Test%20Garden!5e0!3m2!1sen!2sus!4v1685936334229!5m2!1sen!2sus" width="260" height="260" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
+  },
+  {
+    time: '6:00pm',
+    invitees: 'Everyone',
+    id: 'Dinner Cruise',
+    location: 'Portland Spirit',
+    description: 'Eat dinner while cruising down the Willamette River',
+    googleMap: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2796.217940450072!2d-122.66700812358839!3d45.50569123066923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54950a7221bf15d9%3A0x624ff4e8032eafde!2sPortland%20Spirit%20Cruises%20and%20Events!5e0!3m2!1sen!2sus!4v1685938843455!5m2!1sen!2sus" width="260" height="260" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
   },
 ]
 
@@ -55,9 +64,17 @@ export const sunItineraryRows = [
     time: '11:00am',
     invitees: 'Everyone',
     id: 'Brunch',
-    location: 'TBD',
-    tooltip: '',
-    map: ''
+    location: 'Hazel Room',
+    description: 'We will have brunch at one of our favorite brunch places in Portland.',
+    googleMap: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.8921239786196!2d-122.63362852374036!3d45.51225017107478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5495a091be2d277d%3A0xb8409390813019a!2sThe%20Hazel%20Room!5e0!3m2!1sen!2sus!4v1684615979788!5m2!1sen!2sus" width="260" height="260" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ></iframe>'
+  },
+  {
+    time: '1:00pm',
+    invitees: 'Everyone',
+    id: 'Hike',
+    location: 'Latourell Falls',
+    description: 'Come on a short hike with us to see some pretty waterfalls in the forest.',
+    googleMap: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11178.646989390798!2d-122.22809622951688!3d45.53701196726067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54959448385ea8e5%3A0xbcdb6b973e3d24a6!2sLatourell%20Falls%20Trailhead!5e0!3m2!1sen!2sus!4v1685937481338!5m2!1sen!2sus" width="260" height="260" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
   },
 ]
 
@@ -70,7 +87,7 @@ export const itineraryRows = {
 
 export const dinnerRestaurants = [
   {
-    title: "Bamboo Sushi",
+    title: 'Bamboo Sushi',
     menuHighlights: 'Green Machine Roll, Crispy Garlic Tofu',
     isAllVeg: false,
     website: 'https://bamboosushi.com/',
@@ -79,7 +96,7 @@ export const dinnerRestaurants = [
     googleMaps: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.4811537722135!2d-122.6396940237398!3d45.520522271074874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5495a0be15439877%3A0xd7661c0993836182!2sBamboo%20Sushi!5e0!3m2!1sen!2sus!4v1684618054752!5m2!1sen!2sus" width="250" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
   },
   {
-    title: "Fire on the Mountain",
+    title: 'Fire on the Mountain',
     menuHighlights: 'Vegan Drumsticks. We love the Jamaican Jerk sauce!',
     hasMulipleLocations: true,
     website: 'https://portlandwings.com/',
@@ -88,7 +105,7 @@ export const dinnerRestaurants = [
     googleMaps: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44703.1507624979!2d-122.71874870700073!3d45.55139326263649!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5495a1330980c9e7%3A0x2be138aab0c3960c!2sFire%20on%20the%20Mountain%20Buffalo%20Wings%20%7C%20Fremont!5e0!3m2!1sen!2sus!4v1684619364694!5m2!1sen!2sus" width="250" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
   },
   {
-    title: "UCHU Sushi",
+    title: 'UCHU Sushi',
     website: 'https://www.uchusushi.com/',
     menuHighlights: 'Iggy Popper Roll (you can sub vegan cream cheese!)',
     notes: "Second Best Sushi in Town and they have cool fish aquarium. And this was Kate and Jasmin's SECOND DATE 😄",
@@ -96,7 +113,7 @@ export const dinnerRestaurants = [
     googleMaps: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2793.9465531093756!2d-122.68012411244628!3d45.551400696495826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5495a76a504903af%3A0x47e03245ee0e6fc7!2sUCHU%20Sushi!5e0!3m2!1sen!2sus!4v1684619166636!5m2!1sen!2sus" width="250" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
   },
   {
-    title: "Dove Vivi",
+    title: 'Dove Vivi',
     website: 'http://www.dovevivipizza.com/',
     notes: "Jasmin's Fav Pizza EVER. Great crust",
     menuHighlights: 'Vegan Corn Pizza',
@@ -104,14 +121,21 @@ export const dinnerRestaurants = [
     googleMaps: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.1737611841486!2d-122.64021032164563!3d45.52670877107491!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5495a0c715a27329%3A0xc98f9c468c535ee8!2sDove%20Vivi!5e0!3m2!1sen!2sus!4v1684620839038!5m2!1sen!2sus" width="250" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
   },
   {
-    title: "Kati",
+    title: 'Janken',
+    website: 'http://jankenrestaurant.com/',
+    menuHighlights: '',
+    isAllVeg: true,
+    googleMaps: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.2625931986004!2d-122.68669052358746!3d45.52492102938504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54950bf83c69776d%3A0x30817253b39969bf!2sJanken!5e0!3m2!1sen!2sus!4v1685939267800!5m2!1sen!2sus" width="260" height="260" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
+  },
+  {
+    title: 'Kati',
     website: 'https://katiportland.com/',
     menuHighlights: "you can't go wrong with Thai food here. Get the vegan Thai iced tea",
     isAllVeg: true,
     googleMaps: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2796.2688323118914!2d-122.63756102164619!3d45.50466667107459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5495a08418c5ce21%3A0xade7e03a38d8e8dd!2sKati%20Portland!5e0!3m2!1sen!2sus!4v1684620952292!5m2!1sen!2sus" width="250" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
   },
   {
-    title: "PDX Sliders",
+    title: 'PDX Sliders',
     website: 'https://pdxsliders.com/',
     menuHighlights: 'Ross Island Burger (Housemade Black Bean Patty)',
     isAllVeg: false,
@@ -119,7 +143,7 @@ export const dinnerRestaurants = [
     googleMaps: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22376.2186176097!2d-122.66215531261888!3d45.48939444872893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5495a0842983a9fb%3A0xd36274f5ed18e117!2sPDX%20Sliders%20Division%20St!5e0!3m2!1sen!2sus!4v1684618712256!5m2!1sen!2sus" width="250" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
   },
   {
-    title: "Tacovore",
+    title: 'Tacovore',
     website: 'http://tacovorepnw.com/tacovore_portland.html',
     menuHighlights: 'Cauliflower Taco, Tofu Taco',
     isAllVeg: false,
@@ -133,7 +157,7 @@ export const dinnerRestaurants = [
     googleMaps: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2794.0023746484053!2d-122.6689638237382!3d45.55027777107552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5495a73f9657d55f%3A0xc4e71d9e52b69c9c!2sKayo&#39;s%20Ramen%20Bar!5e0!3m2!1sen!2sus!4v1684620699828!5m2!1sen!2sus" width="250" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
   },
   {
-    title: "SuperDeluxe",
+    title: 'SuperDeluxe',
     notes: "Drive-thru burger joint that's better than Burgerville",
     website: 'https://www.eatsuperdeluxe.com/',
     hasMulipleLocations: true,
@@ -142,7 +166,7 @@ export const dinnerRestaurants = [
     googleMaps: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11185.075426947704!2d-122.64528579840811!3d45.50466617934325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5495a104c9d1a181%3A0x9dffc5430eba30bc!2sSuperDeluxe!5e0!3m2!1sen!2sus!4v1684621140193!5m2!1sen!2sus" width="250" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
   },
   {
-    title: "Next Level Burger",
+    title: 'Next Level Burger',
     website: 'https://www.nextlevelburger.com/',
     hasMulipleLocations: true,
     menuHighlights: 'Vegan Milkshakes',
@@ -185,7 +209,7 @@ export const brunchRestaurants = [
     googleMaps: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.9934205401214!2d-122.65609862374038!3d45.51021107107468!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54950a758b301a97%3A0xb8f565bd973285ba!2sJunior&#39;s%20Cafe!5e0!3m2!1sen!2sus!4v1684617857508!5m2!1sen!2sus" width="250" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
   },
   {
-    title: "Paradox Cafe",
+    title: 'Paradox Cafe',
     website: 'https://paradoxorganiccafe.com/',
     menuHighlights: 'MORE Vegan French Toast!',
     isAllVeg: false,
@@ -195,14 +219,14 @@ export const brunchRestaurants = [
 
 export const lateNightRestaurants = [
   {
-    title: "Victoria Bar",
+    title: 'Victoria Bar',
     website: 'https://victoriapdx.com/',
     menuHighlights: 'Buffalo Cauliflower, Cornbread',
     isAllVeg: false,
     googleMaps: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2793.61714865741!2d-122.67785252373785!3d45.55802667107556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5495a712ee8d9a13%3A0xfe173a70116370f0!2sVictoria%20Bar!5e0!3m2!1sen!2sus!4v1684618169714!5m2!1sen!2sus" width="250" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
   },
   {
-    title: "Matador",
+    title: 'Matador',
     website: 'https://www.matadorrestaurants.com/locations/se-portland',
     menuHighlights: 'Beyond Meat Street Tacos',
     isAllVeg: false,
@@ -210,10 +234,10 @@ export const lateNightRestaurants = [
     googleMaps: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44726.02366467302!2d-122.71711165136719!3d45.522629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5495a0beba84c9eb%3A0x838dfbaf689e3cdf!2sMatador%20East%20Portland!5e0!3m2!1sen!2sus!4v1684618245565!5m2!1sen!2sus" width="250" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
   },
   {
-    title: "Rontoms",
-    notes: 'Nice outdoor seating with firepits',
+    title: 'Rontoms',
+    notes: 'Nice outdoor seating oen the back patio with firepits and a ping pong table',
     website: 'http://www.rontoms.net/',
-    menuHighlights: 'Veggie Burger, Tofutti vegan ice cream sandwich',
+    menuHighlights: 'Black Bean Burger, Tofutti vegan ice cream sandwich',
     isAllVeg: false,
     googleMaps: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.3710434752!2d-122.66434541245695!3d45.52273839649383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5495a0a5fed62565%3A0x9f04265b15024d83!2sRontoms!5e0!3m2!1sen!2sus!4v1684619925999!5m2!1sen!2sus" width="250" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
   },

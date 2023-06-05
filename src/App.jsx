@@ -124,7 +124,7 @@ function App() {
         {/* ITINERARY */}
         <TabPanel value="3" sx={{ maxWidth: '1000px', margin: 'auto' }}>
           <div style={{ paddingTop: '20px' }}>
-            {Object.entries(itineraryRows).map((entry) => <ItineraryGrid rows={entry[1]} date={entry[0]} />)}
+            {Object.entries(itineraryRows).map(([date, rows]) => <ItineraryGrid rows={rows} date={date} />)}
           </div>
         </TabPanel>
 
