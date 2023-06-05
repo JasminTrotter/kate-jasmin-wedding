@@ -31,6 +31,42 @@ export const friItineraryRows = [
     map: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.4566808930886!2d-122.65847282358759!3d45.521014829645864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5495a1246fccb831%3A0xe030d600050c6494!2sJackie&#39;s!5e0!3m2!1sen!2sus!4v1684724085513!5m2!1sen!2sus" width="260" height="260" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
   },
 ]
+export const satItineraryRows = [
+  {
+    time: '11:00am',
+    invitees: 'Everyone',
+    id: 'Brunch',
+    location: 'TBD',
+    tooltip: '',
+    map: ''
+  },
+  {
+    time: '1:00pm',
+    invitees: 'Everyone',
+    id: 'Hike',
+    location: 'TBD',
+    tooltip: '',
+    map: ''
+  },
+]
+
+export const sunItineraryRows = [
+  {
+    time: '11:00am',
+    invitees: 'Everyone',
+    id: 'Brunch',
+    location: 'TBD',
+    tooltip: '',
+    map: ''
+  },
+]
+
+export const itineraryRows = {
+  'Thursday, August 10': thursItineraryRows,
+  'Friday, August 11': friItineraryRows,
+  'Saturday, August 12': satItineraryRows,
+  'Sunday, August 13': sunItineraryRows,
+}
 
 export const dinnerRestaurants = [
   {

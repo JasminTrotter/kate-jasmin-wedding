@@ -12,7 +12,7 @@ import { hotels } from './data';
 import PhoneIcon from '@mui/icons-material/Phone';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
-import { thursItineraryRows, friItineraryRows, brunchRestaurants, dinnerRestaurants, lateNightRestaurants } from './data';
+import { itineraryRows, brunchRestaurants, dinnerRestaurants, lateNightRestaurants } from './data';
 
 const activeTabStyles = { borderBottom: 1, borderColor: 'divider', backgroundColor: '#34324A', color: 'white' };
 const restaurantPanelStyles = { padding: '20px', position: 'relative' };
@@ -124,8 +124,7 @@ function App() {
         {/* ITINERARY */}
         <TabPanel value="3" sx={{ maxWidth: '1000px', margin: 'auto' }}>
           <div style={{ paddingTop: '20px' }}>
-            <ItineraryGrid rows={thursItineraryRows} date="Thursday, August 10" />
-            <ItineraryGrid rows={friItineraryRows} date="Friday, August 11" />
+            {Object.entries(itineraryRows).map((entry) => <ItineraryGrid rows={entry[1]} date={entry[0]} />)}
           </div>
         </TabPanel>
 
