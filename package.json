@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "homepage": "https://jasmintrotter.github.io/kate-jasmin-wedding",
+  "main": "./src/main.jsx",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
