@@ -12,28 +12,30 @@ export default function Hotel({ title, googleMaps, phone, website }) {
       </div>
       <CardHeader title={title}></CardHeader>
 
-      <div style={{ display: 'flex', textAlign: 'center', margin: 'auto', overflow: 'scroll' }}>
-        <Chip
-          label="Visit Website"
-          component="a"
-          href={website}
-          variant="outlined"
-          clickable
-          target='_blank'
-          icon={<OpenInNewIcon />}
-          sx={{ marginLeft: '10px' }}
-        />
-        <Chip
-          icon={<PhoneIcon />}
-          label={phone}
-          component="a"
-          href={'tel:' + phone}
-          variant="outlined"
-          clickable
-          target='_blank'
-          sx={{ marginLeft: '15px' }}
-        />
+      <div style={{ display: 'flex', overflow: 'scroll' }}>
+        <div style={{ textAlign: 'center', margin: 'auto' }}>
+          <Chip
+            label="Visit Website"
+            component="a"
+            href={website}
+            variant="outlined"
+            clickable
+            target='_blank'
+            icon={<OpenInNewIcon />}
+            sx={{ marginLeft: '10px' }}
+          />
+          <Chip
+            icon={<PhoneIcon />}
+            label={phone}
+            component="a"
+            href={'tel:' + phone}
+            variant="outlined"
+            clickable
+            target='_blank'
+            sx={{ marginLeft: '15px' }}
+          />
 
+        </div>
       </div>
       <div style={{ textAlign: 'center', marginTop: '25px' }}>
         <td className='google-iframe' dangerouslySetInnerHTML={{ __html: googleMaps }} />

@@ -11,7 +11,7 @@ export default function Restaurant({ title, menuHighlights, isAllVeg, googleMaps
       <Typography variant="h5" gutterBottom component="div">
         {title}
       </Typography>
-      <div style={{ textAlign: 'left' }}>
+      <div style={{ textAlign: 'center' }}>
 
         <Chip
           variant='outlined'
