@@ -14,7 +14,7 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 
 
-function Row({ row, open, setOpen, index }) {
+function Row({ row, open, setOpen, index, date }) {
 
   return (
     <React.Fragment>
@@ -52,12 +52,12 @@ function Row({ row, open, setOpen, index }) {
               <Table size="small" aria-label="details">
                 <TableHead>
                   <TableRow>
-                    {row.invitees && <TableCell>Invitees</TableCell>}
+                    <TableCell>Date and Time</TableCell>
                     <TableCell>Description</TableCell>
                   </TableRow>
                 </TableHead>
                 <TableBody>
-                  {row.invitees && <TableCell>{row.invitees}</TableCell>}
+                  <TableCell>{date}, {row.time}</TableCell>
                   <TableCell>{row.description}</TableCell>
                 </TableBody>
               </Table>
@@ -100,7 +100,7 @@ export default function ItineraryGrid({ rows, date }) {
           </TableHead>
           <TableBody>
             {rows.map((row) => (
-              <Row key={row.id} row={row} open={open} setOpen={setOpen} index={row.id} />
+              <Row key={row.id} row={row} open={open} setOpen={setOpen} index={row.id} date={date} />
             ))}
           </TableBody>
         </Table>
