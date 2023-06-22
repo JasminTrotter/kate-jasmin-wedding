@@ -13,8 +13,9 @@ import Paper from '@mui/material/Paper';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 
+const tableCellStyles = { fontWeight: 'bold', fontSize: 'medium', color: '#000' };
 
-function Row({ row, open, setOpen, index, date }) {
+function Row({ row, open, setOpen, index, date, invitees }) {
 
   return (
     <React.Fragment>
@@ -41,6 +42,7 @@ function Row({ row, open, setOpen, index, date }) {
         </TableCell>
         <TableCell sx={{ color: (open === index) && '#fff' }}>{row.id}</TableCell>
         <TableCell sx={{ color: (open === index) && '#fff' }}>{row.location}</TableCell>
+        <TableCell sx={{ color: (open === index) && '#fff' }}>{row.invitees}</TableCell>
       </TableRow>
       <TableRow>
         <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
@@ -93,9 +95,10 @@ export default function ItineraryGrid({ rows, date }) {
           <TableHead>
             <TableRow sx={{ backgroundColor: '#9995DB' }}>
               <TableCell />
-              <TableCell sx={{ fontWeight: 'bold', fontSize: 'medium', color: '#000' }}>Time</TableCell>
-              <TableCell sx={{ fontWeight: 'bold', fontSize: 'medium', color: '#000' }}>Activity</TableCell>
-              <TableCell sx={{ fontWeight: 'bold', fontSize: 'medium', color: '#000' }}>Location</TableCell>
+              <TableCell sx={tableCellStyles}>Time</TableCell>
+              <TableCell sx={tableCellStyles}>Activity</TableCell>
+              <TableCell sx={tableCellStyles}>Location</TableCell>
+              <TableCell sx={tableCellStyles}>Invitees</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>

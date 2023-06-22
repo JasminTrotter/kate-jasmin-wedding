@@ -2,15 +2,16 @@ export const thursItineraryRows = [
   {
     time: 'Afternoon',
     id: 'Arrivals',
+    invitees: 'Everyone',
     location: 'PDX',
     description: 'Plan to arrive in the afternoon if you would like to be here in time for dinner. Let Kate or Jasmin know if you need a ride from the airport.'
   },
   {
     time: '7:00pm',
     id: 'Dinner',
-    invitees: 'Everyone',
+    invitees: 'Family and Out-of-Town Guests Only',
     location: 'Bamboo Sushi - SE Portland',
-    description: 'Welcome Dinner for all wedding guests',
+    description: 'Welcome dinner for family of the brides and all guests that are traveling from outside of Portland',
     googleMap: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.48096702596!2d-122.6396940235877!3d45.52052602967852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5495a0be15439877%3A0xd7661c0993836182!2sBamboo%20Sushi!5e0!3m2!1sen!2sus!4v1685937097557!5m2!1sen!2sus" width="260" height="260" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
   },
 ]
@@ -21,7 +22,7 @@ export const friItineraryRows = [
     invitees: 'Family',
     id: 'Family Photos',
     location: 'Laurelhurst Park',
-    description: 'Family Photos in the park taken by photographer.',
+    description: 'Family photos in the park taken by photographer.',
     googleMap: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11181.243923316675!2d-122.62934143887644!3d45.523947206694864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5495a0eac4eeb42d%3A0xa26df736588d055e!2sLaurelhurst%20Park!5e0!3m2!1sen!2sus!4v1685938203527!5m2!1sen!2sus" width="260" height="260" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
   },
   {
@@ -36,6 +37,7 @@ export const friItineraryRows = [
     time: '10:00pm',
     id: 'Drinks and Dancing',
     location: "Jackie's",
+    invitees: 'Everyone',
     description: "Put on your dancing shoes 'cause we'll dance the night away at one of our favorite clubs",
     googleMap: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.4566808930886!2d-122.65847282358759!3d45.521014829645864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5495a1246fccb831%3A0xe030d600050c6494!2sJackie&#39;s!5e0!3m2!1sen!2sus!4v1684724085513!5m2!1sen!2sus" width="260" height="260" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
   },
@@ -62,7 +64,7 @@ export const satItineraryRows = [
 export const sunItineraryRows = [
   {
     time: '11:00am',
-    invitees: 'Everyone',
+    invitees: 'Family Only',
     id: 'Brunch',
     location: 'Hazel Room',
     description: 'We will have brunch at one of our favorite brunch places in Portland.',
