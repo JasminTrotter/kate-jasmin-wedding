@@ -73,7 +73,7 @@ function App() {
               On this site, you'll find our recommendations for hotels and restaurants in Portland. Simply click on the tabs above to navigate to the information.
             </p>
             <p>
-              The <i>Itinerary</i> tab holds a rough plan of the scheduled group activites, which all guests are invited and encouraged to participate.
+              The <i>Itinerary</i> tab holds our planned activites for the weekend, including the wedding ceremony on Friday, August 11.
             </p>
             <p>
               We can't wait to see you in August!

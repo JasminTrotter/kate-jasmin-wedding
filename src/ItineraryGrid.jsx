@@ -41,7 +41,6 @@ function Row({ row, open, setOpen, index, date, invitees }) {
           {row.time}
         </TableCell>
         <TableCell sx={{ color: (open === index) && '#fff' }}>{row.id}</TableCell>
-        <TableCell sx={{ color: (open === index) && '#fff' }}>{row.location}</TableCell>
         <TableCell sx={{ color: (open === index) && '#fff' }}>{row.invitees}</TableCell>
       </TableRow>
       <TableRow>
@@ -55,14 +54,18 @@ function Row({ row, open, setOpen, index, date, invitees }) {
                 <TableHead>
                   <TableRow>
                     <TableCell>Date and Time</TableCell>
+                    <TableCell>Location</TableCell>
                     <TableCell>Description</TableCell>
                   </TableRow>
                 </TableHead>
                 <TableBody>
                   <TableCell>{date}, {row.time}</TableCell>
+                  <TableCell>{row.location}</TableCell>
                   <TableCell>{row.description}</TableCell>
                 </TableBody>
               </Table>
+
+              {row.website && <div style={{ marginTop: '15px' }}><a href="https://portlandspirit.com/" target="_blank">https://portlandspirit.com/</a></div>}
 
               <div style={{ textAlign: 'center', marginTop: '15px' }}>
                 <td style={{
@@ -97,7 +100,6 @@ export default function ItineraryGrid({ rows, date }) {
               <TableCell />
               <TableCell sx={tableCellStyles}>Time</TableCell>
               <TableCell sx={tableCellStyles}>Activity</TableCell>
-              <TableCell sx={tableCellStyles}>Location</TableCell>
               <TableCell sx={tableCellStyles}>Invitees</TableCell>
             </TableRow>
           </TableHead>

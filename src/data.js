@@ -2,7 +2,7 @@ export const thursItineraryRows = [
   {
     time: 'Afternoon',
     id: 'Arrivals',
-    invitees: 'Everyone',
+    invitees: 'Out-of-Town Guests',
     location: 'PDX',
     description: 'Plan to arrive in the afternoon if you would like to be here in time for dinner. Let Kate or Jasmin know if you need a ride from the airport.'
   },
@@ -19,7 +19,7 @@ export const thursItineraryRows = [
 export const friItineraryRows = [
   {
     time: '2:00pm',
-    invitees: 'Family',
+    invitees: 'Family Only',
     id: 'Family Photos',
     location: 'Laurelhurst Park',
     description: 'Family photos in the park taken by photographer.',
@@ -27,7 +27,7 @@ export const friItineraryRows = [
   },
   {
     time: '6:00pm',
-    invitees: 'Everyone',
+    invitees: 'All Wedding Guests',
     id: 'Dinner and Ceremony',
     location: 'Portland City Grill',
     description: 'A brief vow-exchange ceremnory will take place at Portland City Grill. Dinner and speeches to directly follow.',
@@ -37,7 +37,7 @@ export const friItineraryRows = [
     time: '10:00pm',
     id: 'Drinks and Dancing',
     location: "Jackie's",
-    invitees: 'Everyone',
+    invitees: 'All Wedding Guests',
     description: "Put on your dancing shoes 'cause we'll dance the night away at one of our favorite clubs",
     googleMap: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.4566808930886!2d-122.65847282358759!3d45.521014829645864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5495a1246fccb831%3A0xe030d600050c6494!2sJackie&#39;s!5e0!3m2!1sen!2sus!4v1684724085513!5m2!1sen!2sus" width="260" height="260" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
   },
@@ -45,7 +45,7 @@ export const friItineraryRows = [
 export const satItineraryRows = [
   {
     time: '1:00pm',
-    invitees: 'Everyone',
+    invitees: 'Family and Out-of-Town Guests Only',
     id: 'Visit the Rose Garden',
     location: 'International Rose Test Garden',
     description: 'Take a walk with us in the beautiful rose garden, one of the gems of Portland.',
@@ -53,10 +53,11 @@ export const satItineraryRows = [
   },
   {
     time: '6:00pm',
-    invitees: 'Everyone',
+    invitees: 'Family and Out-of-Town Guests Only',
     id: 'Dinner Cruise',
     location: 'Portland Spirit',
-    description: 'Eat dinner while cruising down the Willamette River',
+    description: 'Eat dinner while cruising down the Willamette River. Tickets cost $100 per person.',
+    website: 'https://portlandspirit.com/',
     googleMap: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2796.217940450072!2d-122.66700812358839!3d45.50569123066923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54950a7221bf15d9%3A0x624ff4e8032eafde!2sPortland%20Spirit%20Cruises%20and%20Events!5e0!3m2!1sen!2sus!4v1685938843455!5m2!1sen!2sus" width="260" height="260" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
   },
 ]
@@ -72,7 +73,7 @@ export const sunItineraryRows = [
   },
   {
     time: '1:00pm',
-    invitees: 'Everyone',
+    invitees: 'Family and Out-of-Town Guests Only',
     id: 'Hike',
     location: 'Latourell Falls',
     description: 'Come on a short hike with us to see some pretty waterfalls in the forest.',
