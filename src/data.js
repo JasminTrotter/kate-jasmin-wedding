@@ -10,9 +10,9 @@ export const thursItineraryRows = [
     time: '7:00pm',
     id: 'Dinner',
     invitees: 'Family and Out-of-Town Guests Only',
-    location: 'Bamboo Sushi - SE Portland',
-    description: 'Welcome dinner for family of the brides and all guests that are traveling from outside of Portland',
-    googleMap: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.48096702596!2d-122.6396940235877!3d45.52052602967852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5495a0be15439877%3A0xd7661c0993836182!2sBamboo%20Sushi!5e0!3m2!1sen!2sus!4v1685937097557!5m2!1sen!2sus" width="260" height="260" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
+    location: 'Kate & Jasmin\'s house',
+    description: 'Welcome dinner for family of the brides and all guests that are traveling from outside of Portland. We will be ordering take-out from Bamboo Sushi and hosting everyone at our house.',
+    googleMap: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2797.545478081355!2d-122.59784548444205!3d45.47895922910106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5495a0052a741f33%3A0x49fb2491b6d52f8c!2s6216%20SE%2067th%20Ave%2C%20Portland%2C%20OR%2097206!5e0!3m2!1sen!2sus!4v1687844954067!5m2!1sen!2sus" width="260" height="260" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
   },
 ]
 
