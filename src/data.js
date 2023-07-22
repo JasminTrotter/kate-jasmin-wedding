@@ -18,12 +18,12 @@ export const thursItineraryRows = [
 
 export const friItineraryRows = [
   {
-    time: '2:00pm',
+    time: '3:45pm',
     invitees: 'Family Only',
     id: 'Family Photos',
-    location: 'Laurelhurst Park',
+    location: 'Mt. Tabor',
     description: 'Family photos in the park taken by photographer.',
-    googleMap: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11181.243923316675!2d-122.62934143887644!3d45.523947206694864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5495a0eac4eeb42d%3A0xa26df736588d055e!2sLaurelhurst%20Park!5e0!3m2!1sen!2sus!4v1685938203527!5m2!1sen!2sus" width="260" height="260" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
+    googleMap: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.730131592606!2d-122.59483492358788!3d45.51551093001345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5495a0feff106a9b%3A0xc50a80c94b890ba2!2sMount%20Tabor%20-%20Stairs!5e0!3m2!1sen!2sus!4v1690056845651!5m2!1sen!2sus" width="260" height="260" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
   },
   {
     time: '6:00pm',
