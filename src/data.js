@@ -21,9 +21,9 @@ export const friItineraryRows = [
     time: '3:45pm',
     invitees: 'Family Only',
     id: 'Family Photos',
-    location: 'Mt. Tabor',
-    description: 'Family photos in the park taken by photographer.',
-    googleMap: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.730131592606!2d-122.59483492358788!3d45.51551093001345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5495a0feff106a9b%3A0xc50a80c94b890ba2!2sMount%20Tabor%20-%20Stairs!5e0!3m2!1sen!2sus!4v1690056845651!5m2!1sen!2sus" width="260" height="260" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
+    location: 'Mt. Tabor Park Playground',
+    description: 'Family photos in the park taken by photographer. Parking is near Mt Tabor Visitor\'s Center (right across the street from the playground). Map below shows exact meeting location for the photos. You can type in "Mt Tabor Visitor\'s Center" in google maps and it will take you right to the parking lot.',
+    googleMap: '<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2795.746507808991!2d-122.5957788!3d45.5151813!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5495a0fed0970faf%3A0x64a276a0dea9099e!2sMt%20Tabor%20Park%20Playground%2C%20Mt%20Tabor%2C%20Portland%2C%20OR%2097215!5e0!3m2!1sen!2sus!4v1690057389777!5m2!1sen!2sus" width="260" height="260" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>',
   },
   {
     time: '6:00pm',
